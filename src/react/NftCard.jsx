@@ -23,7 +23,7 @@ export default function NftCard() {
             <img src={userProfile} alt="profile" />
           </div>
           <div>
-            <span>Creation of</span> Jules Wyvern
+            <span>Creation of</span> <div className="name">Jules Wyvern</div>
           </div>
         </div>
       </article>

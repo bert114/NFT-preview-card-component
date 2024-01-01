@@ -21,8 +21,23 @@ main {
   }
 
   picture {
+    position: relative;
+    cursor: pointer;
+
     img {
       border-radius: 10px;
+    }
+
+    &:hover {
+      &::before {
+        transition: 1s;
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-color: $clr-primary220;
+        opacity: 0.4;
+        border-radius: 6px;
+      }
     }
   }
 
@@ -62,6 +77,12 @@ main {
     font-weight: $semi-bold;
     opacity: 0.9;
     margin-bottom: 2rem;
+    cursor: pointer;
+    transition: 0.15s;
+
+    &:hover {
+      color: $clr-primary220;
+    }
   }
 
   p {
@@ -90,12 +111,26 @@ main {
       border-radius: 50%;
     }
 
+    > :nth-child(2) {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     span {
       opacity: 0.6;
     }
 
     img {
       width: 30px;
+    }
+
+    .name {
+      transition: 0.15s;
+      cursor: pointer;
+    }
+
+    .name:hover {
+      color: $clr-primary220;
     }
   }
 }
